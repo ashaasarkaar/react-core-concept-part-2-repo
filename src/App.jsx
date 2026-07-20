@@ -1,5 +1,6 @@
 
 import './App.css'
+import Count from './Count'
 
 function App() {
   
@@ -15,10 +16,22 @@ function App() {
     const add = num + 10;
     alert(add);
   }
+    // code for style count section START
+      const countStyle = {
+        border: '2px solid red',
+        padding: '20px'
+      }
+    // code for style count section END
+
 
   return (
     <div>
-     <button className='btn' onClick={handleClickBtn}>Click Me-1</button>
+
+      {/*code for count kora with react START*/}
+       <Count></Count>
+      {/*code for count kora with react END*/}
+
+     {/* <button className='btn' onClick={handleClickBtn}>Click Me-1</button>
      <button className='btn' onClick={function handleClickBtn2(){
       alert('clicked Btn-2')
      }}>Click Me-2</button>
@@ -28,7 +41,7 @@ function App() {
       alert('clicked-Btn-4')
      }}>Click Me-4</button>
 
-     <button className='btn' onClick={()=>handleAdditionClick(5)}>Click Me-5</button>
+     <button className='btn' onClick={()=>handleAdditionClick(5)}>Click Me-5</button> */}
 
 
     </div>
