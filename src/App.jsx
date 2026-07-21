@@ -7,18 +7,24 @@ import Counter from './Counter'
 import CricketMan from './CricketMan'
 import Users from './Users'
 import Friends from './Friends'
+import Posts from './Posts'
 
 // API theke normal fetch URL without async START
-const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
-.then(res => res.json())
+// const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
+// .then(res => res.json())
 // API theke normal fetch URL without async END
 
 // API theke async fetch URL without async START
-const fetchFriends = async() =>{
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+// const fetchFriends = async() =>{
+//   const res = await fetch('https://jsonplaceholder.typicode.com/users');
+//   return res.json()
+// }
+// API theke async fetch URL without async END
+
+const fetchPosts = async() =>{
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   return res.json()
 }
-// API theke async fetch URL without async END
 
 function App() {
   
@@ -41,13 +47,18 @@ function App() {
   //     }
   //   // code for style count section END
 
-  const friendsPromise = fetchFriends();
+  // const friendsPromise = fetchFriends();
+  const postsPromise = fetchPosts();
+
   return (
     <div>
 
-      <Suspense fallback={<h3>Friends are coming...</h3>}>
+    <Suspense fallback={<h3>All Posts Are Coming...</h3>}>
+      <Posts postsPromise={postsPromise}></Posts>
+    </Suspense>
+      {/* <Suspense fallback={<h3>Friends are coming...</h3>}>
         <Friends friendsPromise={friendsPromise}></Friends>
-      </Suspense>
+      </Suspense> */}
      {/* <Suspense fallback={<p>Users Data Is Loading...</p>}>
       <Users fetchUsers={fetchUsers}></Users>
      </Suspense> */}
