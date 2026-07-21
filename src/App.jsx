@@ -1,36 +1,56 @@
 
+import { Suspense } from 'react'
 import './App.css'
 import Batsman from './batsman'
 import Count from './Count'
 import Counter from './Counter'
 import CricketMan from './CricketMan'
+import Users from './Users'
+import Friends from './Friends'
 
+// API theke normal fetch URL without async START
+const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
+.then(res => res.json())
+// API theke normal fetch URL without async END
+
+// API theke async fetch URL without async START
+const fetchFriends = async() =>{
+  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+  return res.json()
+}
+// API theke async fetch URL without async END
 
 function App() {
   
-  function handleClickBtn(){
-    alert('Button-1')
-  }
+  // function handleClickBtn(){
+  //   alert('Button-1')
+  // }
 
-  const handleClickBtn3 = () =>{
-    alert('clicked btn-3')
-  }
+  // const handleClickBtn3 = () =>{
+  //   alert('clicked btn-3')
+  // }
 
-  const handleAdditionClick = (num) =>{
-    const add = num + 10;
-    alert(add);
-  }
-    // code for style count section START
-      const countStyle = {
-        border: '2px solid red',
-        padding: '20px'
-      }
-    // code for style count section END
+  // const handleAdditionClick = (num) =>{
+  //   const add = num + 10;
+  //   alert(add);
+  // }
+  //   // code for style count section START
+  //     const countStyle = {
+  //       border: '2px solid red',
+  //       padding: '20px'
+  //     }
+  //   // code for style count section END
 
-
+  const friendsPromise = fetchFriends();
   return (
     <div>
 
+      <Suspense fallback={<h3>Friends are coming...</h3>}>
+        <Friends friendsPromise={friendsPromise}></Friends>
+      </Suspense>
+     {/* <Suspense fallback={<p>Users Data Is Loading...</p>}>
+      <Users fetchUsers={fetchUsers}></Users>
+     </Suspense> */}
       {/*<CricketMan></CricketMan>*/}
       {/* <Batsman></Batsman> */}
   

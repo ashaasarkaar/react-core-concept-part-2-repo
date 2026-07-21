@@ -409,6 +409,13 @@ body {
   line-height: 1.8;
 }
 
+/* self-design card-2 */
+.card-two{
+  border: 2px solid purple;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+}
 
 
 
