@@ -1,6 +1,9 @@
 
 import './App.css'
+import Batsman from './batsman'
 import Count from './Count'
+import Counter from './Counter'
+
 
 function App() {
   
@@ -27,8 +30,12 @@ function App() {
   return (
     <div>
 
+      <Batsman></Batsman>
+  
       {/*code for count kora with react START*/}
-       <Count></Count>
+       {/* <Count></Count> */}
+       {/* <Counter></Counter> */}
+       
       {/*code for count kora with react END*/}
 
      {/* <button className='btn' onClick={handleClickBtn}>Click Me-1</button>
