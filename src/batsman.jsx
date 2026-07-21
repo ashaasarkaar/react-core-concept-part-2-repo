@@ -41,7 +41,7 @@ const Batsman = () => {
             <h2>Player: Bangla Batsman</h2>
 
             {runs >= 50 && runs < 100 && <h2>Welcome For Half Century</h2>}
-            {runs >= 100 && <h2>Welcome For Half Century</h2>}
+            {runs >= 100 && <h2>Welcome For Century</h2>}
 
             <h2>Six : {sixes}</h2>
             <h2>Four : {fours}</h2>

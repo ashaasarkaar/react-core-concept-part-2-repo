@@ -3,6 +3,7 @@ import './App.css'
 import Batsman from './batsman'
 import Count from './Count'
 import Counter from './Counter'
+import CricketMan from './CricketMan'
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
   return (
     <div>
 
-      <Batsman></Batsman>
+      {/*<CricketMan></CricketMan>*/}
+      {/* <Batsman></Batsman> */}
   
       {/*code for count kora with react START*/}
        {/* <Count></Count> */}
