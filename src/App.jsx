@@ -8,6 +8,7 @@ import CricketMan from './CricketMan'
 import Users from './Users'
 import Friends from './Friends'
 import Posts from './Posts'
+import Comments from './Comments'
 
 // API theke normal fetch URL without async START
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
@@ -21,8 +22,13 @@ import Posts from './Posts'
 // }
 // API theke async fetch URL without async END
 
-const fetchPosts = async() =>{
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+// const fetchPosts = async() =>{
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+//   return res.json()
+// }
+
+const fetchComments = async() =>{
+  const res = await fetch('https://jsonplaceholder.typicode.com/comments');
   return res.json()
 }
 
@@ -48,14 +54,17 @@ function App() {
   //   // code for style count section END
 
   // const friendsPromise = fetchFriends();
-  const postsPromise = fetchPosts();
-
+  // const postsPromise = fetchPosts();
+  const commentsPromise = fetchComments();
   return (
     <div>
 
-    <Suspense fallback={<h3>All Posts Are Coming...</h3>}>
-      <Posts postsPromise={postsPromise}></Posts>
+    <Suspense fallback={<h3>All Comments Are Coming...</h3>}>
+      <Comments commentsPromise={commentsPromise}></Comments>
     </Suspense>
+    {/* <Suspense fallback={<h3>All Posts Are Coming...</h3>}>
+      <Posts postsPromise={postsPromise}></Posts>
+    </Suspense> */}
       {/* <Suspense fallback={<h3>Friends are coming...</h3>}>
         <Friends friendsPromise={friendsPromise}></Friends>
       </Suspense> */}
