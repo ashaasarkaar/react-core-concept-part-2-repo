@@ -9,6 +9,7 @@ import Users from './Users'
 import Friends from './Friends'
 import Posts from './Posts'
 import Comments from './Comments'
+import Players from './Players'
 
 // API theke normal fetch URL without async START
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
@@ -27,10 +28,10 @@ import Comments from './Comments'
 //   return res.json()
 // }
 
-const fetchComments = async() =>{
-  const res = await fetch('https://jsonplaceholder.typicode.com/comments');
-  return res.json()
-}
+// const fetchComments = async() =>{
+//   const res = await fetch('https://jsonplaceholder.typicode.com/comments');
+//   return res.json()
+// }
 
 function App() {
   
@@ -55,13 +56,15 @@ function App() {
 
   // const friendsPromise = fetchFriends();
   // const postsPromise = fetchPosts();
-  const commentsPromise = fetchComments();
+  // const commentsPromise = fetchComments();
   return (
     <div>
 
-    <Suspense fallback={<h3>All Comments Are Coming...</h3>}>
+
+    <Players></Players>
+    {/* <Suspense fallback={<h3>All Comments Are Coming...</h3>}>
       <Comments commentsPromise={commentsPromise}></Comments>
-    </Suspense>
+    </Suspense> */}
     {/* <Suspense fallback={<h3>All Posts Are Coming...</h3>}>
       <Posts postsPromise={postsPromise}></Posts>
     </Suspense> */}
