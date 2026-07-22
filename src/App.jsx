@@ -61,7 +61,7 @@ function App() {
     <div>
 
 
-    <Players></Players>
+    {/* <Players></Players> */}
     {/* <Suspense fallback={<h3>All Comments Are Coming...</h3>}>
       <Comments commentsPromise={commentsPromise}></Comments>
     </Suspense> */}
@@ -74,7 +74,7 @@ function App() {
      {/* <Suspense fallback={<p>Users Data Is Loading...</p>}>
       <Users fetchUsers={fetchUsers}></Users>
      </Suspense> */}
-      {/*<CricketMan></CricketMan>*/}
+      <CricketMan></CricketMan>
       {/* <Batsman></Batsman> */}
   
       {/*code for count kora with react START*/}
