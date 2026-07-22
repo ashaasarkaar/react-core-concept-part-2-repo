@@ -10,6 +10,7 @@ import Friends from './Friends'
 import Posts from './Posts'
 import Comments from './Comments'
 import Players from './Players'
+import Workers from './Workers'
 
 // API theke normal fetch URL without async START
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
@@ -60,7 +61,7 @@ function App() {
   return (
     <div>
 
-
+    <Workers></Workers>
     {/* <Players></Players> */}
     {/* <Suspense fallback={<h3>All Comments Are Coming...</h3>}>
       <Comments commentsPromise={commentsPromise}></Comments>
@@ -74,7 +75,7 @@ function App() {
      {/* <Suspense fallback={<p>Users Data Is Loading...</p>}>
       <Users fetchUsers={fetchUsers}></Users>
      </Suspense> */}
-      <CricketMan></CricketMan>
+      {/* <CricketMan></CricketMan> */}
       {/* <Batsman></Batsman> */}
   
       {/*code for count kora with react START*/}
