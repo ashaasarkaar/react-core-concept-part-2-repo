@@ -11,6 +11,7 @@ import Posts from './Posts'
 import Comments from './Comments'
 import Players from './Players'
 import Workers from './Workers'
+import CounterApp from './CounterApp'
 
 // API theke normal fetch URL without async START
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
@@ -60,8 +61,8 @@ function App() {
   // const commentsPromise = fetchComments();
   return (
     <div>
-
-    <Workers></Workers>
+    <CounterApp></CounterApp>
+    {/* <Workers></Workers> */}
     {/* <Players></Players> */}
     {/* <Suspense fallback={<h3>All Comments Are Coming...</h3>}>
       <Comments commentsPromise={commentsPromise}></Comments>
