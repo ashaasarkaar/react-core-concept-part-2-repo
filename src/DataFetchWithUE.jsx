@@ -1,6 +1,18 @@
 import { useEffect, useState } from "react";
 import Data from "./Data";
 
+/**
+ * 3. Task 3 : API Data Fetching With useEffect
+    
+    Create a user list application :
+    
+    1. Fetch  and display data from the JSONPlaceholder API.
+    2. Display user name,company name and city in a list.
+    3. Show a loading state while fetching data.
+    4. Show an error message if the API request fails.
+ * 
+ */
+
 const DataFetchWithUE = () =>{
     const[datas, setDatas] = useState([])
     const[loading, setLoading] = useState(true)
